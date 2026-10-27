@@ -8,7 +8,7 @@ body {
 	flex-direction: column;
 	margin: 0;
 	padding-top: 168px;
-	background: #d9c6e2;
+	background: #060606;
 	color: #fff;
 }
 
@@ -43,29 +43,38 @@ body {
 .nav a {
 	color:  #F1F2C4;
 	font-size: 22px;
+	font-family: Verdana, sans-serif;
 	text-decoration: none;
+}
+
+.nav a:hover {
+	color: #BF964B;
 }
 
 .intro {
 	padding: 42px 72px 20px;
 	background: #F1F2C4;
-	color: #BF964B;
+	color: #94651E;
 }
 
 .intro h1 {
 	margin: 0;
 	color: #012326;
-	font-size: 44px;
+	font-size: 52px;
+	font-family:'Courier New', monospace;
+	font-weight: 700;
+    margin-left: 30px;
 }
 
 .intro p {
-	margin: 4px 0 0 68px;
-	font-size: 20px;
+	margin: 4px 0 0 60px;
+	font-size: 25px;
+	font-family: Georgia, serif
 }
 
 .reviews {
 	display: flex;
-	flex: 1;
+	flex: 1 0 auto;
 	min-height: 55vh;
 	flex-direction: column;
 	justify-content: space-between;
@@ -74,27 +83,61 @@ body {
 	color: #F1F2C4;
 }
 
-.grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 48px;
+.cards {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	min-height: 420px;
 	margin: auto 0;
 }
 
 .card {
+	flex: 1 1 0;
+	min-width: 0;
 	margin: 0;
+	padding: 18px;
+	border: 1px solid rgba(241, 242, 196, 0.45);
+	border-radius: 24px;
+	background: rgba(241, 242, 196, 0.13);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+	backdrop-filter: blur(12px);
 	text-align: center;
+	transition: flex 300ms ease, transform 300ms ease, opacity 300ms ease, background 300ms ease;
+}
+
+.card > a {
+	display: block;
+	padding: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.65);
+	border-radius: 16px;
+	background: #F1F2C4;
 }
 
 .card img {
 	display: block;
 	width: 100%;
-	max-width: 320px;
 	height: 230px;
 	margin: 0 auto;
+	border-radius: 10px;
 	object-fit: contain;
+	transition: transform 300ms ease;
 }
 
+.card:hover {
+	flex: 1.6 1 0;
+	transform: translateY(-14px);
+	background: rgba(241, 242, 196, 0.24);
+}
+
+.cards:hover .card:not(:hover) {
+	flex: 0.7 1 0;
+	transform: scale(0.9);
+	opacity: 0.75;
+}
+
+.card:hover img {
+	transform: scale(0.94);
+}
 
 .card p {
 	margin: 12px 0 0;

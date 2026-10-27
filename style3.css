@@ -43,7 +43,12 @@ body {
 .nav a {
 	color:  #F1F2C4;
 	font-size: 22px;
+	font-family: Verdana, sans-serif;
 	text-decoration: none;
+}
+
+.nav a:hover {
+	color: #BF964B;
 }
 
 .game {
@@ -98,6 +103,7 @@ body {
 	height: auto;
 }
 
+
 .info p {
 	grid-column: 1 / -1;
 	margin: 0 0 16px;
@@ -114,7 +120,7 @@ body {
 
 .how {
 	grid-column: 1/3;
-	margin-left: 100px;
+	margin-left: 180px;
 }
 
 .how h2 {
@@ -125,7 +131,7 @@ body {
 	width: 560px;
 	max-width: calc(100% - 100px);
 	aspect-ratio: 16 / 9;
-	margin: 24px 0 0 200px;
+	margin: 24px 0 0 220px;
 }
 
 .video iframe {
