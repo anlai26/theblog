@@ -2,6 +2,11 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: "Climate Crisis";
+	src: url("font/ClimateCrisis.ttf");
+}
+
 body {
 	display: flex;
 	min-height: 100vh;
@@ -29,20 +34,23 @@ body {
 
 .logo {
 	color: #F1F2C4;
-	font-size: 40px;
+	font-size: 37px;
+	font-family: "Climate Crisis", sans-serif;
 	text-decoration: none;
+	white-space: nowrap;
 }
 
 .nav {
 	display: flex;
 	align-items: center;
 	gap: 140px;
-	padding: 0 144px 2px 0;
+	padding: 0 80px 2px 0;
+	margin-top: 8px;
 }
 
 .nav a {
 	color:  #F1F2C4;
-	font-size: 22px;
+	font-size: 18px;
 	font-family: Verdana, sans-serif;
 	text-decoration: none;
 }
@@ -108,13 +116,15 @@ body {
 	grid-column: 1 / -1;
 	margin: 0 0 16px;
 	font-size: 27px;
+	font-family: Arial, sans-serif;
 	line-height: 39px;
 }
 
 .how p {
 	margin: 0;
-	margin-left: 100px;
+	margin-left: 80px;
 	font-size: 23px;
+	font-family: Arial, sans-serif;
 	line-height: 29px;
 }
 
